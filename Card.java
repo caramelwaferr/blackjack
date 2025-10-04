@@ -1,17 +1,22 @@
 public class Card {
-    public int rank;
-    public char suit;
+    private final Rank rank;
+    private final Suit suit;
 
-    public Card(int rank, int suit) {
+
+    public Card(Rank rank, Suit suit) {
         this.rank = rank;
-        this.suit = (char) suit;
+        this.suit = suit;
     }
 
-    public int getRank() {
+    public Rank getRank() {
         return rank;
     }
 
-    public int getSuit() {
+    public Suit getSuit() {
         return suit;
+    }
+
+    public String toString() {
+        return rank + " of " + suit;
     }
 }
